@@ -126,11 +126,10 @@ if __name__ == "__main__":
     message = '\n'.join(stats) + '\n'
 
     if args.debug:
-        print message
+        print(message)
     else:
         sock = socket()
         try:
-            print "connecting to ", args.graphite, args.port
             sock.connect((args.graphite, args.port))
         except:
             print ((
@@ -138,4 +137,4 @@ if __name__ == "__main__":
                 "is carbon-agent.py running?") % {'server': args.graphite,
                                                   'port': args.port})
             sys.exit(1)
-        sock.sendall(message)
+        sock.sendall(message.encode('utf-8'))
