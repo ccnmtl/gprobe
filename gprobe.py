@@ -13,6 +13,8 @@ def split_line(line):
 
 
 def percent(num, den):
+    if den == 0:
+        return 0.
     return float(num) / float(den) * 100.
 
 
