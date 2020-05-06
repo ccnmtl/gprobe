@@ -1,3 +1,5 @@
+Moved to: https://github.com/ccnmtl/graphite-probe-linux
+
 Extract various system stats and submit to a Carbon/Graphite server.
 
 Aims to be a fairly faithful port of the old graphite-probe-linux Perl
